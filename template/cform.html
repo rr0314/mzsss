@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mizone | CANDIDATE form</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="/media/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+
+       <!-- Icon Font Stylesheet -->
+    <link rel="shortcut icon" href="https://mizone.in/wp-content/themes/Mizone/image/favicon.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/static/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+   <div class="container-fluid bg-light sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-light navbar-dark p-0">
+                <a href="/" class="navbar-brand">
+                    <img src="/media/img/logo.png" >
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="/" class="nav-item nav-link text-dark">Home</a>
+                        <a href="/about/" class="nav-item nav-link text-dark">About</a>
+                        <a href="/service/" class="nav-item nav-link text-dark">Services</a>
+                        <a href="/mal/" class="nav-item nav-link text-dark">Malabar Angels</a>
+                        </a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active text-dark" data-bs-toggle="dropdown">More</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                
+                                <a href="/gallery/" class="dropdown-item">Gallery</a>
+                                 
+                                 
+                                <a href="404" class="dropdown-item ">404 Page</a>
+                            </div>
+                        </div>
+                        <a href="/contact/" class="nav-item nav-link text-dark">Contact</a>
+                    </div>
+                    <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+     <!-- Hero Start -->
+    <div class="container-fluid pt-5  hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h4 class="display-6 text-dark mb-4 animated slideInRight">CANDIDATE REGISTRATION</h4>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-dark" href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a class="text-dark" href="#">More</a></li>
+                            <li class="breadcrumb-item text-dark active" aria-current="page">CANDIDATE REGISTRATION</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+
+
+    <!-- 404 Start -->
+    <div class="container-fluid text-light bg-dark py-5">
+ 
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="mb-4 text-light">CANDIDATE REGISTRATION</h1>
+        </div>
+        <div class="container-fluid bg-dark text-light feature pt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <p class="text-center mb-4"></p>
+                <div class="wow fadeIn" data-wow-delay="0.3s">
+                    <form action="/cform/" method="POST"  enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="cname" class="form-control" id="name" placeholder="Name">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="cemail" class="form-control" id="email" placeholder="Email">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="Phone">Phone Number</label>
+                                    <input type="text" name="cphone" class="form-control" id="subject" placeholder="Phone Number" required style="position: relative;
+                                    width: 100%;
+                                    display: block;
+                                    height: 50px;
+                                    line-height: 30px;
+                                    padding: 6px 20px;
+                                    font-size: 15px;
+                                    color: #696969;
+                                    background: #F0F5F7;
+                                    border: 1px solid #F0F5F7;
+                                    box-sizing: border-box;
+                                    border-radius: 8px;
+                                  
+                                    transition: all 300ms ease;">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Date of Birth </label>
+                                    <input type="date" name="dob" placeholder="dd/mm/yyyy" required style="position: relative;
+                      width: 100%;
+                      display: block;
+                      height: 50px;
+                      line-height: 30px;
+                      padding: 6px 20px;
+                      font-size: 15px;
+                      color: #696969;
+                      background: #F0F5F7;
+                      border: 1px solid #F0F5F7;
+                      box-sizing: border-box;
+                      border-radius: 8px;
+                    
+                      transition: all 300ms ease;">
+                                  </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="form-label">Gender </label>
+                                    <select name="gender" id="gender"class="form-control" >
+                                    <option value="">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="others">Others</option>
+                                    </select>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-label">Photo</div>
+                                <input type="file" class="form-control" style="height:38px;    font-size: 14px;" name="cfile" id="file" onchange="chk_img(this.id);">
+                            
+                              </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <label for="Address">Address</label>
+                                    <textarea class="form-control" placeholder="Address" name="cadress" id="Address" style="height: 150px"></textarea>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Educational Qualification </label>
+               
+              
+              <select class="form-control " name="qualification"  id="qualification" >
+              <option value="">Select</option>
+                                        <option value="DEGREE">DEGREE</option>
+                                        <option value="DIPLOMA">DIPLOMA</option>
+                                        <option value="PG">PG</option>
+                                        <option value="PG DIPLOMA">PG DIPLOMA</option>
+                                        <option value="PhD">PhD</option>
+                                        <option value="PLUS TWO">PLUS TWO</option>
+                                        <option value="SSLC">SSLC</option>                                                    
+                                        </select>
+                
+                            </div>
+                            
+                            
+                            
+                            <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Year Of Experience</label>
+                    <select class="form-control" name="exp" id="exp" >
+                                                <option value="Fresher">Fresher</option>
+                                                <option value="Below 1 Year">Below 1 Year</option>
+                                                <option value="1 To 2 Years">1 To 2 Years</option>
+                                                <option value="2 To 3 Years">2 To 3 Years</option>
+                                                <option value="3 To 5 Years">3 To 5 Years</option>
+                                                <option value="5 To 8 Years">5 To 8 Years</option>
+                                                <option value="Above 8 Years">Above 8 Year</option>
+                                                
+                                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Skills <i class="redstar">*</i></label>
+                          <select name="addskill" id='addskill' class="form-control" required>
+<option value="">Select</option>
+<option value="Arabic">Arabic</option>
+<option value="Biotechnology">Biotechnology</option>
+<option value="Botany">Botany</option>
+<option value="Chemistry">Chemistry</option>
+<option value="Commerce and management studies">Commerce and management studies</option>
+<option value="Computer Science">Computer Science</option>
+<option value="Economics">Economics</option>
+<option value="Education">Education</option>
+<option value="English">English</option>
+<option value="Environmental Science">Environmental Science</option>
+<option value="Geology">Geology</option>
+<option value="Hindi">Hindi</option>
+<option value="History">History</option>
+<option value="Mass communication">Mass communication</option>
+<option value="Library science">Library science </option>
+<option value="Law Department">Law Department </option>
+<option value="Life Sciences">Life Sciences</option>
+<option value="Malayalam and Kerala studies">Malayalam and Kerala studies</option>
+<option value="Mathematics">Mathematics</option>
+<option value="Nanoscience">Nanoscience</option>
+<option value="Physical education">Physical education</option>
+<option value="Physics">Physics</option>
+<option value="Psychology">Psychology </option>
+<option value="Statistics">Statistics</option>
+<option value="Zoology">Zoology</option>
+<option value="Printing Technology">Printing Technology</option>
+<option value="Electronics and communication Engineering">Electronics and communication Engineering</option>
+<option value="Electrical engineering">Electrical engineering</option>
+<option value="Information Technology">Information Technology</option>
+<option value="Mechanical engineering">Mechanical engineering</option>
+</select>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label class="form-label">Martial Status <i class="redstar">*</i></label>
+                                   <select name="mrg" id="mrg"class="form-control" >
+                                   <option value="">Select</option>
+                                   <option value="Single">Single</option>
+                                   <option value="Married">Married</option>
+                                  
+                                   </select>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="form-label">Preferred Job Titles <i class="redstar">*</i></div>
+						<table width="100%">
+						<tr><td width="33%"><div class="form-group">
+                          <label class="form-label">Job Option 1</label>
+                          <select class="form-control" name="job1" id="job1" onChange="getsubjob(this.value,1);">
+                                                    <option value="">Select</option>
+                                                    <option value='1'>Administrative</option><option value='2'>Advt/Publicity/Events</option><option value='3'>Banking</option><option value='4'>Construction/Building</option><option value='5'>Customer care</option><option value='6'>Education/Social Services</option><option value='7'>Financial</option><option value='8'>Food/Restaurant</option><option value='9'>General</option><option value='10'>Healthcare/Medical</option><option value='11'>IT/Software</option><option value='13'>Legal</option><option value='12'>Office</option><option value='17'>Others</option><option value='15'>Research</option><option value='14'>Retail</option><option value='16'>Sales/Marketing</option>                                                    </select>
+                                                  </div></td> <td width="3%"></td><td id="sj1" >
+												  </td><td width="3%"></td><td  width="32%" id="subsj1" ></td></tr>
+						<tr><td width="32%"><div class="form-group">
+                          <label class="form-label">Job Option 2</label>
+                          <select class="form-control" name="job2" id="job2" onChange="getsubjob(this.value,2);">
+                                                    <option value="">Select</option>
+                                                    <option value='1'>Administrative</option><option value='2'>Advt/Publicity/Events</option><option value='3'>Banking</option><option value='4'>Construction/Building</option><option value='5'>Customer care</option><option value='6'>Education/Social Services</option><option value='7'>Financial</option><option value='8'>Food/Restaurant</option><option value='9'>General</option><option value='10'>Healthcare/Medical</option><option value='11'>IT/Software</option><option value='13'>Legal</option><option value='12'>Office</option><option value='17'>Others</option><option value='15'>Research</option><option value='14'>Retail</option><option value='16'>Sales/Marketing</option>                                                    </select>
+                                                  </div></td> <td width="3%"></td><td  width="32%" id="sj2" ></td><td width="3%"></td><td  width="32%" id="subsj2" ></td></tr>
+						</table>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <!-- <div class="col-lg-12"> -->
+                                        <span class="pf-title">Upload Your Resume Here</span>
+                                        <div class="pf-field">
+                                            <input id="file-upload" class="form-control"name="resume" type="file"   accept=".pdf" required="">
+                                            <p> Suitable file is pdf</p>
+                                        </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                        </div>
+                            <br>
+                            <br>
+                            <div class="col-3">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    
+</div>
+    <!-- 404 End -->
+        
+
+
+
+    <!-- Footer Start -->
+     <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class=" col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="/" class="d-inline-block mb-3">
+                        <img src="/media/img/logo.png" >
+                    </a>
+                    
+                        
+                    
+                </div>
+                <div class="col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>
+                        Building No:446, Mangattuparamba,
+                        Near Kannur University Campus,
+                        Kalliasseri, Kannur, Kerala -670 567</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 7034112113</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 7688916916</p>
+                    <p><i class="fa fa-envelope me-3"></i>admin@mizone.in</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://www.facebook.com/mizonekannur/"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://twitter.com/mizone15492698?lang=en"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square me-3" href="https://www.instagram.com/mizoneknr/?hl=en"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square" href="https://in.linkedin.com/company/malabar-innovation-entrepreneurship-zone-mizone"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <!--  -->
+                <div class=" col-lg-6 wow fadeIn" data-wow-delay="0.7s">
+                    <!-- <h5 class="text-white mb-4">Our Services</h5> -->
+                    
+                        <h4 class="widget_title">About Mizone</h4>
+                        <div class="widget-contact-list row m0">
+                           <iframe width="300" height="250" src="https://www.youtube.com/embed/B7eM0N-obEQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/lib/wow/wow.min.js"></script>
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/lib/counterup/counterup.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
